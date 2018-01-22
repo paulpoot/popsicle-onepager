@@ -22,7 +22,9 @@ import axios from 'axios'
 Vue.component('masthead', require('./components/masthead.vue'));
 Vue.component('about', require('./components/about.vue'));
 Vue.component('features', require('./components/features.vue'));
-
+Vue.component('assignment', require('./components/assignment.vue'));
+Vue.component('process', require('./components/process.vue'));
+Vue.component('team', require('./components/team.vue'));
 
 const app = new Vue({
     el: '#app',
@@ -30,4 +32,8 @@ const app = new Vue({
 });
 
 var AOS = require('aos/dist/aos.js');
-AOS.init();
+AOS.init({
+    duration: 600,
+    easing: 'ease-in-sine',
+    delay: 100,
+});

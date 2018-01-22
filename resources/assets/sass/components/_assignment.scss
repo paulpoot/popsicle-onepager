@@ -1,0 +1,14 @@
+.assignment {
+    padding: 128px 0 0;
+    background-position: center center;
+    background-size: cover;
+}
+
+.assignment__image img {
+    width: 100%;
+}
+
+.assignment__details {
+    padding: 64px;
+    background-color: $gray-100;
+}

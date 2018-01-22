@@ -1,7 +1,7 @@
 .masthead {
     position: relative;
     width: 100vw;
-    height: 750px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,11 +25,13 @@
 }
 
 .masthead__image {
+    height: 750px;
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
 
     img {
-        height: 750px;
+        position: relative;
+        height: 100%;
     }
 }
 
@@ -49,7 +51,7 @@
 .masthead__bottom-gradient {
     position: absolute;
     top: 600px;
-    width: 100vw;
+    width: 0vw;
     height: 200px;
     background: linear-gradient(45deg, #{$gray-100} 0%, #{$gray-100} 50%, #{$primary} 50%, #{$primaryLighter} 100%);
     transform: skewY(-6deg);
