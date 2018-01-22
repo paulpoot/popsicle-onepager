@@ -20,6 +20,9 @@ import axios from 'axios'
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 Vue.component('masthead', require('./components/masthead.vue'));
+Vue.component('about', require('./components/about.vue'));
+Vue.component('features', require('./components/features.vue'));
+
 
 const app = new Vue({
     el: '#app',

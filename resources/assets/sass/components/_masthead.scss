@@ -1,10 +1,14 @@
 .masthead {
     position: relative;
     width: 100vw;
-    height: 600px;
+    height: 750px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .container {
+        z-index: 2;
+    }
 }
 
 .masthead__content {
@@ -34,7 +38,19 @@
     top: -100px;
     width: 100vw;
     height: 750px;
+    background-color: $primary;
     background: linear-gradient(45deg, #{$primary} 0%,#{$primaryLighter} 100%);
-    transform: skewY(-6deg);
+    transform: skewY(-6deg) scale(1.111);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border: 1px solid rgba(0, 0, 0, 0); 
+    z-index: 1;
 }
 
+.masthead__bottom-gradient {
+    position: absolute;
+    top: 600px;
+    width: 100vw;
+    height: 200px;
+    background: linear-gradient(45deg, #{$gray-100} 0%, #{$gray-100} 50%, #{$primary} 50%, #{$primaryLighter} 100%);
+    transform: skewY(-6deg);
+}
