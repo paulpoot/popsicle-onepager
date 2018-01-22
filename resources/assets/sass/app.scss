@@ -1,0 +1,16 @@
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Dependencies
+@import "node_modules/aos/dist/aos";
+
+// Project 
+@import "global";
+@import "mixin";
+
+@import "components/masthead";
+
+@import "layouts/dashboard";

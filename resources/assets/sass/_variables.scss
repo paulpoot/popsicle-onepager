@@ -1,0 +1,11 @@
+$primary:           #0081cc;
+$primaryLighter:    #0096EE;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":            $primary,
+  "primaryLighter":     $primaryLighter
+), $theme-colors);
+
+$font-family-sans-serif:      "Hind", sans-serif;
+$headings-font-family:        "Montserrat", sans-serif;
