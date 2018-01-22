@@ -2,7 +2,7 @@
     <div class="about container">
         <div class="row">
             <div class="col-md-6">
-                <h3 data-aos="fade-zoom-in">Sam is jouw persoonlijke <span>{{ samFunctions[samIndex] }}</span>.</h3>
+                <h3 data-aos="fade-zoom-in">Sam is jouw persoonlijke <span ref="samFunction">{{ samFunctions[samIndex] }}</span></h3>
                 <p data-aos="fade-zoom-in">
                     Sam biedt een leuke, vernieuwende en persoonlijke ervaring. Jouw Sam is uniek! 
                     Sam leert graag van je om ervoor te zorgen dat er voor jou een nieuwe wereld open gaat.
@@ -20,20 +20,41 @@
             return {
                samFunctions: ["gids", "buddy"], 
                samIndex: 0,
+               animationLength: 250,
             }
         },
         methods: {
-            updateSamIndex() {
-                this.samIndex++;
+            updateSamFunction() {
+                var samFunction = this.$refs.samFunction;
 
-                if(this.samIndex === this.samFunctions.length) {
-                    this.samIndex = 0;
-                }
+                Velocity(samFunction, {
+                    opacity: 0,
+                }, {
+                    duration: this.animationLength,
+                    easing: 'easeInQuad',
+                    complete: this.updateSamIndex(),
+                });
+
+                Velocity(samFunction, 'reverse', {
+                    delay: this.animationLength,
+                    duration: this.animationLength,
+                    easing: 'easeInQuad',
+                })
+            },
+
+            updateSamIndex() {
+                setTimeout(function () {
+                    this.samIndex++;
+
+                    if(this.samIndex === this.samFunctions.length) {
+                        this.samIndex = 0;
+                    }
+                }.bind(this), this.animationLength); 
             }
         },
         mounted() {
             setInterval(function () {
-                this.updateSamIndex();
+                this.updateSamFunction();
             }.bind(this), 2000); 
         }
     }
