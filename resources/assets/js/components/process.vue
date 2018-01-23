@@ -1,40 +1,26 @@
 <template>
-    <div class="about container">
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Sam is jouw persoonlijke <span>{{ samFunctions[samIndex] }}</span>.</h3>
-                <p>
-                    Sam biedt een leuke, vernieuwende en persoonlijke ervaring. Jouw Sam is uniek! 
-                    Sam leert graag van je om ervoor te zorgen dat er voor jou een nieuwe wereld open gaat.
-                </p>
+    <div class="process container-fluid">
+        <div class="process__top-gradient"></div>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-6" data-aos="fade-zoom-in">
+                    <h3>Proces</h3>
+                    <p>
+                        Na het ontvangen van de opdracht zijn we begonnen met desk en field research. 
+                        Een enquête onder 160 mensen liet zien dat de doelgroep gek is op interactieve 
+                        elementen die aansluiten bij hun interesses. Concurrentieonderzoek gaf ons inspiratie 
+                        en social media onderzoek toonde aan dat bezoekers van Beeld en Geluid hun ervaringen 
+                        graag online delen. Er ontstonden drie concepten, waarvan Sam de meeste potentie had.
+                    </p>
+                </div>
+                <div class="process__illustration col-md-4" data-aos=" fade-zoom-in">
+                    <img src="public/images/destination.svg"/>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import Velocity from 'velocity-animate';
-
-    export default {
-        data() {
-            return {
-               samFunctions: ["gids", "buddy"], 
-               samIndex: 0,
-            }
-        },
-        methods: {
-            updateSamIndex() {
-                this.samIndex++;
-
-                if(this.samIndex === this.samFunctions.length) {
-                    this.samIndex = 0;
-                }
-            }
-        },
-        mounted() {
-            setInterval(function () {
-                this.updateSamIndex();
-            }.bind(this), 2000); 
-        }
-    }
+    export default {}
 </script>

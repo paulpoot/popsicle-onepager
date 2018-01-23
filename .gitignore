@@ -1,2 +1,4 @@
 node_modules
 public
+resources/assets/images
+package-lock.json

@@ -1,7 +1,6 @@
 .masthead {
     position: relative;
     width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +11,8 @@
 }
 
 .masthead__content {
+    margin-top: 64px;
+    text-align: center;
     align-self: center;
 
     h1 {
@@ -25,13 +26,15 @@
 }
 
 .masthead__image {
-    height: 750px;
-    display: flex;
-    justify-content: flex-end;
+    margin-top: 64px;
+    text-align: center;
 
     img {
         position: relative;
-        height: 100%;
+        width: auto;
+        max-width: 100%;
+        max-height: 375px;
+        height: auto;
     }
 }
 
@@ -39,7 +42,7 @@
     position: absolute;
     top: -100px;
     width: 100vw;
-    height: 750px;
+    height: 550px;
     background-color: $primary;
     background: linear-gradient(45deg, #{$primary} 0%,#{$primaryLighter} 100%);
     transform: skewY(-6deg) scale(1.111);
@@ -50,9 +53,55 @@
 
 .masthead__bottom-gradient {
     position: absolute;
-    top: 600px;
+    top: 350px;
     width: 0vw;
     height: 200px;
     background: linear-gradient(45deg, #{$gray-100} 0%, #{$gray-100} 50%, #{$primary} 50%, #{$primaryLighter} 100%);
     transform: skewY(-6deg);
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .masthead {
+        height: 100vh;
+        min-height: 750px;
+    }
+
+    .masthead__top-gradient {
+        height: 750px;
+    }
+
+    .masthead__bottom-gradient {
+        top: 600px;
+    }
+
+    .masthead__content {
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .masthead__image {
+        margin-top: 0;
+        justify-content: flex-end;
+
+        img {
+            width: auto;
+            max-height: 750px;
+            height: auto;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .masthead__top-gradient {
+        height: 75vh;
+    }
+
+    .masthead__bottom-gradient {
+        top: 60vh;
+        height: 20vh;
+    }
+    
+    .masthead__image img {
+        max-height: 75vh;
+    }
 }

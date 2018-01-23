@@ -2,17 +2,24 @@
     position: relative;
     padding: 64px 0;
     background-color: $gray-150;
-
-    .features__column {
-        display: flex;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-    }
     
     img {
         margin-bottom: 48px;
         max-width: 75%;
         max-height: 300px;
+    }
+}
+
+.features__column {
+    margin-bottom: 32px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .features__column {
+        margin-bottom: 0;
     }
 }

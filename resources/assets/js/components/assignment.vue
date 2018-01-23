@@ -1,10 +1,10 @@
 <template>
-    <div class="assignment container-fluid">
+    <div class="assignment container">
         <div class="row">
-            <div class="assignment__image col-md-6">
+            <div class="assignment__image col-md-6" data-aos="fade-zoom-in">
                 <img src="public/images/beeldengeluid.jpg" />
             </div>
-            <div class="col-md-6 container">
+            <div class="col-md-6" data-aos="fade-zoom-in">
                 <div class="assignment__details col">
                     <h3>Beeld en Geluid</h3>
                     <p>
@@ -20,7 +20,5 @@
 </template>
 
 <script>
-    import Velocity from 'velocity-animate';
-
     export default {}
 </script>

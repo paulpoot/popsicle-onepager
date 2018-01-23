@@ -1,14 +1,28 @@
 .assignment {
-    padding: 128px 0 0;
+    padding: 0;
     background-position: center center;
     background-size: cover;
 }
 
-.assignment__image img {
-    width: 100%;
+.assignment__image {
+    padding: 0 0 64px;
+
+    img {
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
 }
 
 .assignment__details {
-    padding: 64px;
     background-color: $gray-100;
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .assignment {
+        padding: 128px 0 0;
+    }
+
+    .assignment__image {
+        padding: 2.75rem 0 0;
+    }
 }

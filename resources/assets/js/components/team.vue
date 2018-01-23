@@ -1,12 +1,12 @@
 <template>
-    <div class="about container">
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Sam is jouw persoonlijke <span>{{ samFunctions[samIndex] }}</span>.</h3>
-                <p>
-                    Sam biedt een leuke, vernieuwende en persoonlijke ervaring. Jouw Sam is uniek! 
-                    Sam leert graag van je om ervoor te zorgen dat er voor jou een nieuwe wereld open gaat.
-                </p>
+    <div class="team container-fluid">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="team__member col-sm-5 col-md-2" v-for="member in teamMembers" @click="openLink(member.link)">
+                    <img :src="'public/images/' + member.img" />
+                    <h4>{{ member.name }}</h4>
+                    <span>{{ member.title }}</span>
+                </div>
             </div>
         </div>
     </div>
@@ -18,23 +18,20 @@
     export default {
         data() {
             return {
-               samFunctions: ["gids", "buddy"], 
-               samIndex: 0,
+               teamMembers: [{
+                   name: "Lorem",
+                   img: "ipsum.jpg", 
+                   title: "dolor",
+                   link: "https://sit.amet"
+               }]
             }
         },
         methods: {
-            updateSamIndex() {
-                this.samIndex++;
-
-                if(this.samIndex === this.samFunctions.length) {
-                    this.samIndex = 0;
+            openLink(target) {
+                if(target) {
+                    window.open(target, '_blank');
                 }
             }
-        },
-        mounted() {
-            setInterval(function () {
-                this.updateSamIndex();
-            }.bind(this), 2000); 
         }
     }
 </script>

@@ -1,9 +1,45 @@
-.about {
+.process {
     position: relative;
-    padding: 64px 0;
-    z-index: 1;
+    padding: 0;
+    margin-top: 300px;
+    color: $white;
+    background-color: $secondary;
+}
 
-    span {
-        font-weight: 700;
+.process__top-gradient {
+    position: absolute;
+    top: -150px;
+    width: 100vw;
+    height: 300px;
+    background-color: $secondary;
+    transform: skewY(-6deg) scale(1.111);
+}
+
+.process__illustration {
+    order: -1;
+    margin-bottom: 32px;
+
+    img {
+        width: 100%;
+    }
+} 
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .process {
+        padding: 128px 0;
+
+        .container {
+            padding: 0;
+        }
+    }
+
+    .process__illustration {
+        order: initial;
+        margin-bottom: 0;        
+
+        img {
+            position: absolute;
+            top: -100px;
+        }
     }
 }

@@ -1,9 +1,42 @@
-.about {
-    position: relative;
-    padding: 64px 0;
-    z-index: 1;
+.team {
+    padding-top: 128px;
+    padding-bottom: 64px;
+    color: $white;
+    background-color: lighten($secondary, 2%);
+
+    .container {
+        padding: 0;
+    }
+}
+
+.team__member {
+    margin-bottom: 64px;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    img {
+        margin-bottom: 32px;
+        width: 100%;
+        max-width: 50vw;
+        border-radius: 100%;
+    }
+
+    h4 {
+        margin-bottom: 0;
+    }
 
     span {
-        font-weight: 700;
+        font-size: .8rem;
+        opacity: .7;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .challenges {
+        padding-top: 32px;
     }
 }

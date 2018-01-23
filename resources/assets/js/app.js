@@ -7,12 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-
-import 'vue-awesome/icons'
-import Icon from 'vue-awesome/components/Icon'
-Vue.component('icon', Icon)
-
-import axios from 'axios'
+var VueScrollTo = require('vue-scrollto');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -24,7 +19,10 @@ Vue.component('about', require('./components/about.vue'));
 Vue.component('features', require('./components/features.vue'));
 Vue.component('assignment', require('./components/assignment.vue'));
 Vue.component('process', require('./components/process.vue'));
+Vue.component('challenges', require('./components/challenges.vue'));
 Vue.component('team', require('./components/team.vue'));
+Vue.component('bottom', require('./components/bottom.vue'));
+
 
 const app = new Vue({
     el: '#app',

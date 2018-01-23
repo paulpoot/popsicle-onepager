@@ -11,7 +11,7 @@
                 <div data-aos="fade-zoom-in" data-aos-delay="200" class="features__column col-md-3">
                     <img src="public/images/checklist.svg"/>
                     <p>
-                        Sam onthoudt wat jij leuk vindt en kan jou daarmee de beste experience in het museum laten zien. Zo bezoek je het museum samen met Sam.
+                        Sam onthoudt wat jij leuk vindt en kan jou daarmee de beste experience in het museum voor Beeld en Geluid laten beleven. Zo bezoek je het museum samen met Sam.
                     </p>
                 </div>
                 <div data-aos="fade-zoom-in" data-aos-delay="400" class="features__column col-md-3">
@@ -27,7 +27,5 @@
 </template>
 
 <script>
-    import Velocity from 'velocity-animate';
-
     export default {}
 </script>

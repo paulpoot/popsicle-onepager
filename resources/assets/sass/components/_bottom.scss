@@ -1,0 +1,25 @@
+.bottom {
+    padding: 64px 0;
+    color: $white;
+    background-color: $secondary;
+    text-align: center;
+}
+
+.bottom__elevator {
+    margin-top: 32px;    
+
+    span:hover {
+        cursor: pointer;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .bottom {
+        text-align: left;
+    }
+
+    .bottom__elevator {
+        margin-top: 0;
+        text-align: right;
+    }
+}
